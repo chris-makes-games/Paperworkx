@@ -1,9 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class FormController : MonoBehaviour
 {
+    public Button finalExitButton;
     public TMP_InputField[] answerInputs;
     public TMP_Text feedbackText;
     public GameObject[] pages;
@@ -20,15 +22,15 @@ public class FormController : MonoBehaviour
         correctAnswers[1] = "2";
         correctAnswers[2] = "200";
 
+        finalExitButton.gameObject.SetActive(false);
+
         SwitchToPage(0);
         UpdateTabStates();
     }
 
     public void SwitchToPage(int pageIndex)
     {
-
         feedbackText.text = "";
-
         currentPageIndex = pageIndex;
         for (int i = 0; i < pages.Length; i++)
         {
@@ -60,6 +62,11 @@ public class FormController : MonoBehaviour
             feedbackText.color = new Color32(15, 80, 40, 255);
             puzzlesSolved[currentPageIndex] = true;
             UpdateTabStates();
+
+            if (currentPageIndex == 2)
+            {
+                finalExitButton.gameObject.SetActive(true);
+            }
         }
         else
         {
@@ -68,6 +75,11 @@ public class FormController : MonoBehaviour
         }
 
         isAnswerSaved = false;
+    }
+
+    public void GoToMainScene()
+    {
+        SceneManager.LoadScene("main");
     }
 
     public void OnSaveButtonPressed()
