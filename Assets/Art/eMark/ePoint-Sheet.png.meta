@@ -1,0 +1,637 @@
+fileFormatVersion: 2
+guid: b285a7c84d1844b9ea71862cafaa9ac3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3680410228319942614
+    second: ePoint-Sheet_0
+  - first:
+      213: 1602209878774779884
+    second: ePoint-Sheet_1
+  - first:
+      213: 1614415314986781891
+    second: ePoint-Sheet_2
+  - first:
+      213: 8578049731498195464
+    second: ePoint-Sheet_3
+  - first:
+      213: 6720020936413772121
+    second: ePoint-Sheet_4
+  - first:
+      213: -785322525588403420
+    second: ePoint-Sheet_5
+  - first:
+      213: -2596509444563296607
+    second: ePoint-Sheet_6
+  - first:
+      213: -4398483172789196851
+    second: ePoint-Sheet_7
+  - first:
+      213: 8216663339423290954
+    second: ePoint-Sheet_8
+  - first:
+      213: -6805622360384453076
+    second: ePoint-Sheet_9
+  - first:
+      213: 416055520842713114
+    second: ePoint-Sheet_10
+  - first:
+      213: 5684284971521675475
+    second: ePoint-Sheet_11
+  - first:
+      213: 182404414495935860
+    second: ePoint-Sheet_12
+  - first:
+      213: 7345184422632260416
+    second: ePoint-Sheet_13
+  - first:
+      213: -7429594991622186872
+    second: ePoint-Sheet_14
+  - first:
+      213: 7033749528405440390
+    second: ePoint-Sheet_15
+  - first:
+      213: -4336961653503557482
+    second: ePoint-Sheet_16
+  - first:
+      213: 5944010520193376133
+    second: ePoint-Sheet_17
+  - first:
+      213: -4958937182782777293
+    second: ePoint-Sheet_18
+  - first:
+      213: 7568904353032967116
+    second: ePoint-Sheet_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ePoint-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 19
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d779be5a91731330800000000000000
+      internalID: 3680410228319942614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ePoint-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 19
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cef0ef755613c3610800000000000000
+      internalID: 1602209878774779884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ePoint-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 19
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ccccb9ec2e876610800000000000000
+      internalID: 1614415314986781891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ePoint-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 19
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80ab59748ca5b0770800000000000000
+      internalID: 8578049731498195464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ePoint-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 20
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 959712eff6f424d50800000000000000
+      internalID: 6720020936413772121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ePoint-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 20
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42bc034e259f915f0800000000000000
+      internalID: -785322525588403420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ePoint-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 21
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ae9bd4ca6857fbd0800000000000000
+      internalID: -2596509444563296607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ePoint-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 14
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc7ed57cbd275f2c0800000000000000
+      internalID: -4398483172789196851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ePoint-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 21
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a46dc4106c3770270800000000000000
+      internalID: 8216663339423290954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ePoint-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 14
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2644dd55829d81a0800000000000000
+      internalID: -6805622360384453076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ePoint-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 20
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a188ba6ba4026c500800000000000000
+      internalID: 416055520842713114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ePoint-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 20
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d014a1a013a2ee40800000000000000
+      internalID: 5684284971521675475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ePoint-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 12
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47d4e7b39d7088200800000000000000
+      internalID: 182404414495935860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ePoint-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 12
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0438ab0e0565fe560800000000000000
+      internalID: 7345184422632260416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ePoint-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 12
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 888965308b6c4e890800000000000000
+      internalID: -7429594991622186872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ePoint-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 12
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6877daffde5ec9160800000000000000
+      internalID: 7033749528405440390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ePoint-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 13
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6900e66ba5400d3c0800000000000000
+      internalID: -4336961653503557482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ePoint-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 13
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58f9f4d431e5d7250800000000000000
+      internalID: 5944010520193376133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ePoint-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 13
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33891c4e7e05e2bb0800000000000000
+      internalID: -4958937182782777293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ePoint-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 13
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc3107548662a0960800000000000000
+      internalID: 7568904353032967116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ePoint-Sheet_0: 3680410228319942614
+      ePoint-Sheet_1: 1602209878774779884
+      ePoint-Sheet_10: 416055520842713114
+      ePoint-Sheet_11: 5684284971521675475
+      ePoint-Sheet_12: 182404414495935860
+      ePoint-Sheet_13: 7345184422632260416
+      ePoint-Sheet_14: -7429594991622186872
+      ePoint-Sheet_15: 7033749528405440390
+      ePoint-Sheet_16: -4336961653503557482
+      ePoint-Sheet_17: 5944010520193376133
+      ePoint-Sheet_18: -4958937182782777293
+      ePoint-Sheet_19: 7568904353032967116
+      ePoint-Sheet_2: 1614415314986781891
+      ePoint-Sheet_3: 8578049731498195464
+      ePoint-Sheet_4: 6720020936413772121
+      ePoint-Sheet_5: -785322525588403420
+      ePoint-Sheet_6: -2596509444563296607
+      ePoint-Sheet_7: -4398483172789196851
+      ePoint-Sheet_8: 8216663339423290954
+      ePoint-Sheet_9: -6805622360384453076
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
