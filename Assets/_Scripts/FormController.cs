@@ -4,32 +4,74 @@ using TMPro;
 
 public class FormController : MonoBehaviour
 {
-    public TMP_InputField answerInput;
-    public Button submitButton;
+    public TMP_InputField[] answerInputs;
     public TMP_Text feedbackText;
+    public GameObject[] pages;
+    public Button[] tabButtons;
 
-    private string correctAnswer = "6";
+    private bool[] puzzlesSolved = new bool[3];
+    private bool isAnswerSaved = false;
+    private string[] correctAnswers = new string[3];
+    private int currentPageIndex = 0;
 
     void Start()
     {
-        submitButton.onClick.AddListener(CheckAnswer);
+        correctAnswers[0] = "6";
+        correctAnswers[1] = "2";
+        correctAnswers[2] = "200";
+
+        SwitchToPage(0);
+        UpdateTabStates();
     }
 
-    void CheckAnswer()
+    public void SwitchToPage(int pageIndex)
     {
-        string playerAnswer = answerInput.text;
 
-        if (playerAnswer == correctAnswer)
+        feedbackText.text = "";
+
+        currentPageIndex = pageIndex;
+        for (int i = 0; i < pages.Length; i++)
         {
-          
+            pages[i].SetActive(i == pageIndex);
+        }
+    }
+
+    void UpdateTabStates()
+    {
+        tabButtons[0].interactable = true;
+        tabButtons[1].interactable = puzzlesSolved[0];
+        tabButtons[2].interactable = puzzlesSolved[1];
+    }
+
+    public void CheckAnswer()
+    {
+        if (!isAnswerSaved)
+        {
+            feedbackText.text = "NO ANSWER DETECTED!";
+            feedbackText.color = Color.red;
+            return;
+        }
+
+        string playerAnswer = answerInputs[currentPageIndex].text;
+
+        if (playerAnswer == correctAnswers[currentPageIndex])
+        {
             feedbackText.text = "Verification PASSED! \nHuman identity confirmed";
-            feedbackText.color = new Color32(20, 150, 50, 255);
+            feedbackText.color = new Color32(15, 80, 40, 255);
+            puzzlesSolved[currentPageIndex] = true;
+            UpdateTabStates();
         }
         else
         {
-            
             feedbackText.text = "WRONG answer! \nNon-human detected.";
             feedbackText.color = Color.red;
         }
+
+        isAnswerSaved = false;
+    }
+
+    public void OnSaveButtonPressed()
+    {
+        isAnswerSaved = true;
     }
 }
