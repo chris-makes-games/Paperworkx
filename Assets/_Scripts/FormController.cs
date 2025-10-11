@@ -22,7 +22,7 @@ public class FormController : MonoBehaviour
         correctAnswers[1] = "2";
         correctAnswers[2] = "200";
 
-        finalExitButton.gameObject.SetActive(false);
+        
 
         SwitchToPage(0);
         UpdateTabStates();
@@ -63,10 +63,6 @@ public class FormController : MonoBehaviour
             puzzlesSolved[currentPageIndex] = true;
             UpdateTabStates();
 
-            if (currentPageIndex == 2)
-            {
-                finalExitButton.gameObject.SetActive(true);
-            }
         }
         else
         {
