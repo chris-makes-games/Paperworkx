@@ -32,7 +32,10 @@ public class TVModule : MonoBehaviour
         {
             if (clickable)
             {
-                
+                if (hasQuest)
+                {
+                    //get the news
+                }                
             }
         }
     }
