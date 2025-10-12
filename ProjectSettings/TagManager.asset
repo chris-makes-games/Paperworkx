@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - foreground
+  - turretIntoMain
+  - mainIntoTurret
+  - mainIntoTut
+  - TurretExit
   layers:
   - Default
   - TransparentFX

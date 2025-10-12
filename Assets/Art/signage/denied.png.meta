@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 14988904da021b14292ba737d0354f90
+guid: 46802138f32e5c746abc43e924cd906b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8184432199726571352
-    second: OutDoor (1)_0
+      213: 4793653731045621151
+    second: denied_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: OutDoor (1)_0
+      name: denied_0
       rect:
         serializedVersion: 2
-        x: 163
-        y: 249
-        width: 428
-        height: 639
+        x: 239
+        y: 69
+        width: 1522
+        height: 742
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 85f98f009b1f49170800000000000000
-      internalID: 8184432199726571352
+      spriteID: f9d3337abaa768240800000000000000
+      internalID: 4793653731045621151
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b6b1ddece4bbb7b4a924b93a1fc5b783
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      OutDoor (1)_0: 8184432199726571352
+      denied_0: 4793653731045621151
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
