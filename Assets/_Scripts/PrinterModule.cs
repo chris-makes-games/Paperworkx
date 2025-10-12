@@ -18,9 +18,20 @@ public class PrinterModule : MonoBehaviour
     public GameObject HighLighter;//highlighter obj
     private Light2D HighlighterLight;// light compontent of highlighter
 
+    public static PrinterModule Instance { get; private set; } //keeps printer loaded
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
         spriteRenderer = GetComponent<SpriteRenderer>();
         HighlighterLight = HighLighter.GetComponent<Light2D>();
         HighlighterLight.intensity = 0f;
