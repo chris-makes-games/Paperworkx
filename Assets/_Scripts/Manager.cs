@@ -7,6 +7,11 @@ public class Manager : MonoBehaviour
     public GameObject playerObject;
     private Vector2 playerLocation;
     playerMove playerScript;
+
+
+    //track player battery
+    public float playerBattery;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

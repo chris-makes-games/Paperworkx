@@ -14,10 +14,6 @@ public class playerMove : MonoBehaviour
     private LightBlink blinkScript;
     public Light2D blinker;
 
-    //main controller
-    public GameObject gameManager;
-    private Manager managerScript;
-
     //paper
     public GameObject paper;
 
@@ -36,35 +32,35 @@ public class playerMove : MonoBehaviour
     //all locations
     private Vector2 tutIntoMain = new Vector2(-14, -6);
     private Vector2 tutStart = new Vector2(-44, -25);
-    private Vector2 mainIntoTut = new Vector2(-14, -7);
+    private Vector2 mainIntoTut = new Vector2(-14, -8);
     private Vector2 mainIntoTurret = new Vector2(-14, 14);
     private Vector2 turretExit = new Vector2(-14, -7);
 
-    //persistent player
-    public static playerMove Instance { get; private set; }
+    //singleton
+    public static playerMove Instance;
 
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject); // Keep this object between scenes
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject); // Destroy duplicate
+        }
+    }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
-  {
-        Manager managerScript = gameManager.GetComponent<Manager>();
-    DontDestroyOnLoad(gameObject);
-    if (Instance != null && Instance != this)
     {
-        Destroy(gameObject); // Destroy duplicate instances
+        rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        blinkScript = blinker.GetComponent<LightBlink>();
     }
-    else
-    {
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-    }
-    rb = GetComponent<Rigidbody2D>();//set rigidbody to component
-    spriteRenderer = GetComponent<SpriteRenderer>(); //set sprite renderer to component
-    blinkScript = blinker.GetComponent<LightBlink>();//gets the script from blinking light
-  }
 
-  // Update is called once per frame
-  void FixedUpdate()
+    // Update is called once per frame
+    void FixedUpdate()
   {
     ProcessBattery();
   }
@@ -79,14 +75,14 @@ public class playerMove : MonoBehaviour
   {
     if (Mathf.Abs(xInput) > 0)
     {
-      batteryLevel -= .01f;
+      batteryLevel -= .03f;
       rb.linearVelocity = new Vector2(xInput * speed, rb.linearVelocity.y);
       float direction = Mathf.Sign(xInput);
       transform.localScale = new Vector3(direction, 1, 1);
     }
     if (Mathf.Abs(yInput) > 0)
     {
-       batteryLevel -= .01f;
+       batteryLevel -= .03f;
        rb.linearVelocity = new Vector2(rb.linearVelocity.x, yInput * speed);
     }
   }
@@ -121,23 +117,27 @@ public class playerMove : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.CompareTag("Untagged"))
+        {
+            return;
+        }
         if (collision.CompareTag("tutIntoMain"))
         {
-            managerScript.movePlayer(tutIntoMain);
+            transform.position = tutIntoMain;
         }
         else if (collision.CompareTag("mainIntoTut"))
         {
-            managerScript.movePlayer(mainIntoTut);
+            transform.position = mainIntoTut;
         }
         else if (collision.CompareTag("mainIntoTurret"))
         {
-            playerCamera.transform.position = new Vector2(0, -8);
-            managerScript.movePlayer(mainIntoTurret);
+            playerCamera.transform.position = new Vector2(8, 0);
+            transform.position = mainIntoTurret;
         }
         else if (collision.CompareTag("turretExit"))
         {
             playerCamera.transform.position = new Vector2(0, 0);
-            managerScript.movePlayer(turretExit);
+            transform.position = turretExit;
         }
         else
         {
