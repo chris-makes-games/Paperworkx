@@ -10,6 +10,8 @@ public class PrinterModule : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public GameObject exlamationMark;// quest marker object
 
+    private bool paperPrinted = false;
+
     //used to give paper to player
     public GameObject playerPaper;
 
@@ -27,6 +29,16 @@ public class PrinterModule : MonoBehaviour
         HighlighterLight = HighLighter.GetComponent<Light2D>();
         HighlighterLight.intensity = 0f;
         exlamationMark.SetActive(false);
+        playerPaper = playerMove.Instance.paper;
+    }
+
+    void Update()
+    {
+        if (playerMove.Instance.paperPrinting > 0 && !paperPrinted) 
+        {
+            PaperReady();
+        }
+
     }
 
     void OnMouseOver()
@@ -60,6 +72,7 @@ public class PrinterModule : MonoBehaviour
         hasPaper = true;
         spriteRenderer.sprite = printerPaperReady;
         exlamationMark.SetActive(true);
+        paperPrinted = true;
     }
 
     void PaperDone()
@@ -68,5 +81,6 @@ public class PrinterModule : MonoBehaviour
         spriteRenderer.sprite = printerPaperUnloaded;
         exlamationMark.SetActive(false);
         playerPaper.SetActive(true);
+        paperPrinted = false;
     }
 }

@@ -1,22 +1,11 @@
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
-using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class AIModule : MonoBehaviour
 {
-
-    private bool hasQuest = false;
     public GameObject exlamationMark;// quest marker object
     private bool clickable = false;
-
-    //big brother screen
-    public GameObject bigBrother;
-
-    //find game manager
-    public GameObject gameManager;
-
-    //player paper
-    public GameObject playerPaper;
 
     public GameObject HighLighter;//highlighter obj
     private Light2D HighlighterLight;// light compontent of highlighter
@@ -27,7 +16,15 @@ public class AIModule : MonoBehaviour
         HighlighterLight = HighLighter.GetComponent<Light2D>();
         HighlighterLight.intensity = 0f;
         exlamationMark.SetActive(true);
-
+        StartCoroutine(DisableAfterDelay());
+    }
+    IEnumerator DisableAfterDelay()
+    {
+        yield return new WaitForSeconds(5f);
+        playerMove.Instance.bigBrother.SetActive(false);
+        playerMove.Instance.welcome.SetActive(false);
+        playerMove.Instance.rejected.SetActive(false);
+        playerMove.Instance.accepted.SetActive(false);
     }
 
     // Update is called once per frame
@@ -42,7 +39,19 @@ public class AIModule : MonoBehaviour
         {
             if (clickable)
             {
-                bigBrother.SetActive(true);
+                if (playerMove.Instance.hasPaper)
+                {
+                    playerMove.Instance.bigBrother.SetActive(true);
+                    exlamationMark.SetActive(false);
+                }
+                else
+                {
+                    playerMove.Instance.bigBrother.SetActive(true);
+                    playerMove.Instance.welcome.SetActive(true);
+                    exlamationMark.SetActive(false);
+
+                }
+
             }
         }
     }

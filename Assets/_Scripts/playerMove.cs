@@ -14,11 +14,21 @@ public class playerMove : MonoBehaviour
     private LightBlink blinkScript;
     public Light2D blinker;
 
+    //big brother dialogue
+    public GameObject welcome;
+    public GameObject rejected;
+    public GameObject accepted;
+
     //paper
     public GameObject paper;
+    public bool hasPaper = false;
+    public int paperPrinting = 0;
 
     //camera
     public GameObject playerCamera;
+
+    //bigbrother
+    public GameObject bigBrother;
 
     //rigidbody and movement
     private Rigidbody2D rb;
@@ -134,7 +144,7 @@ public class playerMove : MonoBehaviour
             playerCamera.transform.position = new Vector2(8, 0);
             transform.position = mainIntoTurret;
         }
-        else if (collision.CompareTag("turretExit"))
+        else if (collision.CompareTag("TurretExit"))
         {
             playerCamera.transform.position = new Vector2(0, 0);
             transform.position = turretExit;
@@ -145,13 +155,19 @@ public class playerMove : MonoBehaviour
         }
     }
 
+    public void printPaper(int answers)
+    {
+        paperPrinting = answers;
+    }
     public void getPaper()
     {
+        hasPaper = true;
         paper.SetActive(true);
     }
 
     public void takePaper()
     {
+        hasPaper = false;
         paper.SetActive(false);
     }
 }

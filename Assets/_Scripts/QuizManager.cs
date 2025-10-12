@@ -13,6 +13,7 @@ public struct QuestionData
 
 public class QuizManager : MonoBehaviour
 {
+
     public static int finalScore;
     public static Vector3 nextSpawnPosition;
     public static bool useCustomSpawnPosition = false;
@@ -130,6 +131,7 @@ public class QuizManager : MonoBehaviour
                 finalScore = correctAnswersCount;
                 feedbackText.text = $"Final Score: {correctAnswersCount}/15!!!";
                 finalExitButton.gameObject.SetActive(true);
+                playerMove.Instance.printPaper(correctAnswersCount);
             }
         }
         else
