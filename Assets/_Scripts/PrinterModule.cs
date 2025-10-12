@@ -23,15 +23,6 @@ public class PrinterModule : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else if (Instance != this)
-        {
-            Destroy(gameObject);
-        }
         spriteRenderer = GetComponent<SpriteRenderer>();
         HighlighterLight = HighLighter.GetComponent<Light2D>();
         HighlighterLight.intensity = 0f;

@@ -10,6 +10,8 @@ public class PosterModule : MonoBehaviour
     public GameObject HighLighter;//highlighter obj
     private Light2D HighlighterLight;// light compontent of highlighter
 
+    public GameObject bigPoster;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,7 +25,7 @@ public class PosterModule : MonoBehaviour
         {
             if (clickable)
             {
-                SceneManager.LoadScene("Paperwork");
+                bigPoster.SetActive(true);
             }
         }
     }
