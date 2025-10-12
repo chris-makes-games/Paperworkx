@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class PrinterModule : MonoBehaviour
 {
+  private AudioSource audioSource;
   public Sprite printerPaperReady; //sprite with paper
   public Sprite printerPaperUnloaded; //regular sprite
   private bool hasPaper = false;
@@ -23,6 +24,7 @@ public class PrinterModule : MonoBehaviour
   // Start is called once before the first execution of Update after the MonoBehaviour is created
   void Start()
   {
+    audioSource = GetComponent<AudioSource>();
     spriteRenderer = GetComponent<SpriteRenderer>();
     HighlighterLight = HighLighter.GetComponent<Light2D>();
     HighlighterLight.intensity = 0f;
@@ -61,7 +63,7 @@ public class PrinterModule : MonoBehaviour
     hasPaper = true;
     spriteRenderer.sprite = printerPaperReady;
     exlamationMark.SetActive(true);
-    //audioSource.Play();
+    audioSource.Play();
   }
 
   void PaperDone()
