@@ -41,6 +41,9 @@ TagManager:
   - name: FloorTiles
     uniqueID: 2124184745
     locked: 0
+  - name: Shadow
+    uniqueID: 3804879573
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
