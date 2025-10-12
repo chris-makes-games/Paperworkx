@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - foreground
   layers:
   - Default
   - TransparentFX
@@ -40,6 +41,12 @@ TagManager:
   m_SortingLayers:
   - name: FloorTiles
     uniqueID: 2124184745
+    locked: 0
+  - name: BackWall
+    uniqueID: 3561187353
+    locked: 0
+  - name: Shadow
+    uniqueID: 3804879573
     locked: 0
   - name: Default
     uniqueID: 0

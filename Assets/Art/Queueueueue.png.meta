@@ -103,10 +103,10 @@ TextureImporter:
       name: Queueueueue_0
       rect:
         serializedVersion: 2
-        x: 89
-        y: 89
-        width: 812
-        height: 512
+        x: 49
+        y: 39
+        width: 402
+        height: 262
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

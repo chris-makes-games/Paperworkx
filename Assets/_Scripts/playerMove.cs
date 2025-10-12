@@ -2,6 +2,7 @@ using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class playerMove : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class playerMove : MonoBehaviour
     public Sprite greenMode;
     public Sprite yellowMode;
     public Sprite redMode;
+    private LightBlink blinkScript;
+    public Light2D blinker;
 
     //rigidbody and movement
     private Rigidbody2D rb;
@@ -20,11 +23,23 @@ public class playerMove : MonoBehaviour
     //variable for battery
     public float batteryLevel;
 
+    public static playerMove Instance { get; private set; }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
         rb = GetComponent<Rigidbody2D>();//set rigidbody to component
         spriteRenderer = GetComponent<SpriteRenderer>(); //set sprite renderer to component
+        blinkScript = blinker.GetComponent<LightBlink>();//gets the script from blinking light
     }
 
     // Update is called once per frame
@@ -65,11 +80,15 @@ public class playerMove : MonoBehaviour
         if (batteryLevel < 700 && batteryLevel > 300)
         {
             spriteRenderer.sprite = yellowMode;
+            blinker.color = Color.yellow;
+            blinkScript.setInterval(0.5f);
         }
         //if battery is less than 300, turn red
         else if (batteryLevel <= 300)
         {
             spriteRenderer.sprite = redMode;
+            blinker.color = Color.red;
+            blinkScript.setInterval(0.25f);
         }
         //keep battery green
         else
