@@ -8,6 +8,7 @@ public class LightBlink : MonoBehaviour
     private float timer;
     private bool isActive;
     private Light2D blinkLight;
+    public float intensity;
 
     void Start()
     {
@@ -27,7 +28,7 @@ public class LightBlink : MonoBehaviour
             }
             else
             {
-                blinkLight.intensity = 11f;
+                blinkLight.intensity = intensity;
                 isActive = true;
             }
             timer = 0f;
