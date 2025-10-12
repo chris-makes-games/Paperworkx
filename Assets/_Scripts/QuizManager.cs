@@ -127,7 +127,7 @@ public class QuizManager : MonoBehaviour
             if (themesCompleted[0] && themesCompleted[1] && themesCompleted[2])
             {
                 finalScore = correctAnswersCount;
-                feedbackText.text = "You have completed all the questions.";
+                feedbackText.text = "Questions Complete. Your results are printing...";
             }
         }
         else
