@@ -2,17 +2,11 @@ using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 
-public class PrinterModule : MonoBehaviour
+public class TVModule : MonoBehaviour
 {
-    public Sprite printerPaperReady; //sprite with paper
-    public Sprite printerPaperUnloaded; //regular sprite
-    private bool hasPaper = false;
-    private SpriteRenderer spriteRenderer;
+
+    private bool hasQuest = false;
     public GameObject exlamationMark;// quest marker object
-
-    //used to give paper to player
-    public GameObject playerPaper;
-
     private bool clickable = false;
 
     public GameObject HighLighter;//highlighter obj
@@ -21,11 +15,15 @@ public class PrinterModule : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
         HighlighterLight = HighLighter.GetComponent<Light2D>();
         HighlighterLight.intensity = 0f;
         exlamationMark.SetActive(false);
-        PaperReady();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 
     void OnMouseOver()
@@ -34,10 +32,7 @@ public class PrinterModule : MonoBehaviour
         {
             if (clickable)
             {
-                if (hasPaper)
-                {
-                    PaperDone();
-                }
+                
             }
         }
     }
@@ -52,20 +47,5 @@ public class PrinterModule : MonoBehaviour
     {
         HighlighterLight.intensity = 0f;
         clickable = false;
-    }
-
-    void PaperReady()
-    {
-        hasPaper = true;
-        spriteRenderer.sprite = printerPaperReady;
-        exlamationMark.SetActive(true);
-    }
-
-    void PaperDone()
-    {
-        hasPaper = false;
-        spriteRenderer.sprite = printerPaperUnloaded;
-        exlamationMark.SetActive(false);
-        playerPaper.SetActive(true);
     }
 }

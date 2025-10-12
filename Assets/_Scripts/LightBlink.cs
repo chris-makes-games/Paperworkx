@@ -23,7 +23,7 @@ public class LightBlink : MonoBehaviour
         {
             if (isActive)
             {
-                blinkLight.intensity = 0f;
+                blinkLight.intensity = intensity * 0.5f;
                 isActive = false;
             }
             else
