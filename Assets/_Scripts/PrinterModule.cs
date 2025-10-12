@@ -27,7 +27,6 @@ public class PrinterModule : MonoBehaviour
         HighlighterLight = HighLighter.GetComponent<Light2D>();
         HighlighterLight.intensity = 0f;
         exlamationMark.SetActive(false);
-        PaperReady();
     }
 
     void OnMouseOver()
