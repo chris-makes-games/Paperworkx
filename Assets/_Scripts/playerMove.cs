@@ -11,8 +11,11 @@ public class playerMove : MonoBehaviour
     public Sprite greenMode;
     public Sprite yellowMode;
     public Sprite redMode;
+    public Sprite deadMode;
     private LightBlink blinkScript;
     public Light2D blinker;
+
+    public bool playerAlive;
 
     //big brother dialogue
     public GameObject welcome;
@@ -64,6 +67,7 @@ public class playerMove : MonoBehaviour
 
     void Start()
     {
+        playerAlive = true;
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         blinkScript = blinker.GetComponent<LightBlink>();
@@ -77,8 +81,14 @@ public class playerMove : MonoBehaviour
 
   void Update()
   {
-    getInput();
-    MoveWithInput();
+        if (playerAlive)
+        {
+            getInput();
+            MoveWithInput();
+        }
+      
+
+    
   }
 
   void MoveWithInput()
@@ -119,6 +129,12 @@ public class playerMove : MonoBehaviour
             blinker.color = Color.red;
             blinkScript.setInterval(0.25f);
         }
+        else if(batteryLevel < 0)
+        {
+            playerAlive = false;
+            spriteRenderer.sprite = deadMode;
+            blinker.color = Color.black;
+        }
         //keep battery green
         else
         {
@@ -141,14 +157,13 @@ public class playerMove : MonoBehaviour
         }
         else if (collision.CompareTag("mainIntoTurret"))
         {
-            playerCamera.transform.position = new Vector2(8, 0);
             transform.position = mainIntoTurret;
         }
         else if (collision.CompareTag("TurretExit"))
         {
-            playerCamera.transform.position = new Vector2(0, 0);
             transform.position = turretExit;
         }
+
         else
         {
             Debug.Log("Error: no such player location");

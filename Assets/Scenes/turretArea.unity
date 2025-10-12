@@ -220,7 +220,6 @@ GameObject:
   - component: {fileID: 113936642}
   - component: {fileID: 113936641}
   - component: {fileID: 113936644}
-  - component: {fileID: 113936643}
   m_Layer: 0
   m_Name: TransitionWall
   m_TagString: turretIntoMain
@@ -301,19 +300,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &113936643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 113936640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc359189998755746a3c776cc2d4aabf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TransitionEntrance
-  sceneLoad: main
 --- !u!61 &113936644
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -612,6 +598,7 @@ GameObject:
   - component: {fileID: 489393816}
   - component: {fileID: 489393815}
   - component: {fileID: 489393814}
+  - component: {fileID: 489393817}
   m_Layer: 0
   m_Name: RocketWithRamp_0 (1)
   m_TagString: Untagged
@@ -649,7 +636,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -738,6 +725,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &489393817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489393813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc359189998755746a3c776cc2d4aabf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TransitionEntrance
+  sceneLoad: credits
 --- !u!1 &920757432
 GameObject:
   m_ObjectHideFlags: 0
@@ -1035,8 +1035,8 @@ Transform:
   m_GameObject: {fileID: 1102818189}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.682291, y: 18.53138, z: 0}
-  m_LocalScale: {x: 5.52, y: 5.6552396, z: 0}
+  m_LocalPosition: {x: 27, y: 40.4, z: 0}
+  m_LocalScale: {x: 23.57, y: 24.49, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1285,7 +1285,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -9.84837, y: 4.275554}
+  m_Offset: {x: -9.84837, y: 5.2790318}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1295,7 +1295,7 @@ BoxCollider2D:
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 102.77427, y: 1.098527}
+  m_Size: {x: 102.77427, y: 1.8106728}
   m_EdgeRadius: 0
 --- !u!1 &1439864652
 GameObject:
@@ -1307,6 +1307,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1439864654}
   - component: {fileID: 1439864653}
+  - component: {fileID: 1439864655}
   m_Layer: 0
   m_Name: Turret (2)_0
   m_TagString: Untagged
@@ -1387,6 +1388,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -39.17}
+--- !u!114 &1439864655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439864652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 893364ca1ca64444da1f1fb2e17dcad8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  targetObject: {fileID: 0}
+  rotationSpeed: 5
 --- !u!1 &1613104072
 GameObject:
   m_ObjectHideFlags: 0

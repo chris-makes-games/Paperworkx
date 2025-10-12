@@ -42,13 +42,15 @@ public class AIModule : MonoBehaviour
                 if (playerMove.Instance.hasPaper)
                 {
                     playerMove.Instance.bigBrother.SetActive(true);
-                    if(playerMove.Instance.paperPrinting > 12)
+                    if(playerMove.Instance.paperPrinting > 11)
                     {
                         playerMove.Instance.accepted.SetActive(true);
+                        playerMove.Instance.paper.SetActive(false);
                     }
                     else
                     {
                         playerMove.Instance.rejected.SetActive(true);
+                        playerMove.Instance.paper.SetActive(false);
                     }
                         exlamationMark.SetActive(false);
                 }
