@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e366190d8b19e5f418c70a624ef91c9e
+guid: 13241834047b11547b290d04e92429ae
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6949155579873646856
-    second: TurretStand_0
+      213: 212703464735712870
+    second: Turret (2)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TurretStand_0
+      name: Turret (2)_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 5
-        width: 42
-        height: 44
+        x: 39
+        y: 399
+        width: 932
+        height: 292
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8f625bc71d3af8f90800000000000000
-      internalID: -6949155579873646856
+      spriteID: 666211a9caca3f200800000000000000
+      internalID: 212703464735712870
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TurretStand_0: -6949155579873646856
+      Turret (2)_0: 212703464735712870
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
