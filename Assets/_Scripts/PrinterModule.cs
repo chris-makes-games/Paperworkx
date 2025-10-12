@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 public class PrinterModule : MonoBehaviour
 {
     public Sprite printerPaperReady; //sprite with paper
-    private bool paperReady = false;
+    public Sprite printerPaperUnloaded; //regular sprite
+    private bool hasPaper = false;
     private SpriteRenderer spriteRenderer;
     public GameObject exlamationMark;// quest marker object
 
@@ -19,12 +20,32 @@ public class PrinterModule : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         HighlighterLight = HighLighter.GetComponent<Light2D>();
+        HighlighterLight.intensity = 0f;
+        exlamationMark.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    void OnMouseOver()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (clickable)
+            {
+                if (hasPaper)
+                {
+                    PaperDone();
+                }
+                else
+                {
+                    PaperReady();
+                }
+            }
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -41,15 +62,15 @@ public class PrinterModule : MonoBehaviour
 
     void PaperReady()
     {
-        paperReady = true;
+        hasPaper = true;
         spriteRenderer.sprite = printerPaperReady;
         exlamationMark.SetActive(true);
     }
 
     void PaperDone()
     {
-        paperReady = false;
-        spriteRenderer.sprite = printerPaperReady;
+        hasPaper = false;
+        spriteRenderer.sprite = printerPaperUnloaded;
         exlamationMark.SetActive(false);
     }
 }
