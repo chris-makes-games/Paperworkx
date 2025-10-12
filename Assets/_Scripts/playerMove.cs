@@ -23,9 +23,20 @@ public class playerMove : MonoBehaviour
     //variable for battery
     public float batteryLevel;
 
+    public static playerMove Instance { get; private set; }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
         rb = GetComponent<Rigidbody2D>();//set rigidbody to component
         spriteRenderer = GetComponent<SpriteRenderer>(); //set sprite renderer to component
         blinkScript = blinker.GetComponent<LightBlink>();//gets the script from blinking light
