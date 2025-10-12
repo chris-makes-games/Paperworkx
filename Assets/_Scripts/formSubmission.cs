@@ -1,16 +1,39 @@
+using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class formSubmission : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+  public RobotInventory robotInventory;
+  private bool hasPaper = false;
+  void Start()
+  {
+
+
+  }
+
+
+  public void PaperCheck()
+  {
+    if (hasPaper)
     {
-        
+      // robot has paper -> printer reads paper
     }
 
-    // Update is called once per frame
-    void Update()
+    // check if robot has paper
+    if (robotInventory != null)
     {
-        
+      hasPaper = true;
+      // printer reads paper; keeps track of wrong questions
     }
+    else
+    {
+      // failure
+    }
+
+
+
+
+  }
 }
