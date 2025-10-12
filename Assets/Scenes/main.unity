@@ -4606,7 +4606,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1675230204
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6267,7 +6267,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AIModule
   exlamationMark: {fileID: 645990647}
-  helloBox: {fileID: 0}
   HighLighter: {fileID: 2130599333}
 --- !u!61 &2145055007
 BoxCollider2D:

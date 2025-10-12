@@ -358,6 +358,7 @@ MonoBehaviour:
   accepted: {fileID: 1530176592}
   paper: {fileID: 851859935}
   hasPaper: 0
+  paperPrinting: 0
   playerCamera: {fileID: 2002992010}
   bigBrother: {fileID: 1578339188}
   speed: 20
@@ -371,7 +372,7 @@ Transform:
   m_GameObject: {fileID: 30380830}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -47.69, y: -25, z: 0}
+  m_LocalPosition: {x: -14.56, y: -10.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2624,13 +2625,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: paper_0
       objectReference: {fileID: 0}
+    - target: {fileID: 6353632630221792269, guid: 5e706fce313b2d04583b3e01d93e6d29, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8210626925056275050, guid: 5e706fce313b2d04583b3e01d93e6d29, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.886091
+      value: 1.16
       objectReference: {fileID: 0}
     - target: {fileID: 8210626925056275050, guid: 5e706fce313b2d04583b3e01d93e6d29, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.9637794
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 8210626925056275050, guid: 5e706fce313b2d04583b3e01d93e6d29, type: 3}
       propertyPath: m_LocalPosition.z

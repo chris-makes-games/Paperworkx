@@ -34,7 +34,7 @@ public class PrinterModule : MonoBehaviour
 
     void Update()
     {
-        if (playerMove.Instance.paperPrinting > 0 && !paperPrinted) 
+        if (playerMove.Instance.paperPrinting > -1 && !paperPrinted) 
         {
             PaperReady();
         }
