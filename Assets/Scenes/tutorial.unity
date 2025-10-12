@@ -364,7 +364,7 @@ Transform:
   m_GameObject: {fileID: 30380830}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.100001, y: -10.700001, z: 0}
+  m_LocalPosition: {x: -47.200005, y: -25.300001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1583,9 +1583,9 @@ PolygonCollider2D:
     m_Paths:
     - - {x: -1, y: 1}
       - {x: -1.0000007, y: -2.2150502}
-      - {x: -0.5978987, y: -2.2062535}
-      - {x: -0.59659576, y: -0.7900977}
-      - {x: -0.59659576, y: 1.0540673}
+      - {x: -0.6115472, y: -2.2158074}
+      - {x: -0.61144, y: -0.7984104}
+      - {x: -0.6236968, y: 1.0498515}
   m_UseDelaunayMesh: 0
 --- !u!61 &525622694
 BoxCollider2D:
@@ -4425,6 +4425,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1422108873}
+  - component: {fileID: 1422108874}
   m_Layer: 0
   m_Name: BackWall
   m_TagString: Untagged
@@ -4450,6 +4451,52 @@ Transform:
   - {fileID: 268251534}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1422108874
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422108872}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -2.2811928, y: 15.113622}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 36.437614, y: 0.7727566}
+  m_EdgeRadius: 0
 --- !u!1 &1431881868
 GameObject:
   m_ObjectHideFlags: 0

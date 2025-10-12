@@ -17,6 +17,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Paperwork.unity
     guid: 8409f5761f4639d46bf19cecb71e951c
+  - enabled: 1
+    path: Assets/Scenes/AIEval.unity
+    guid: b59787de4453d30469c3a4ec5c8247a1
+  - enabled: 1
+    path: Assets/Scenes/turretArea.unity
+    guid: 0373c4116a0114d82bffc74e9b7a5d87
+  - enabled: 1
+    path: Assets/Scenes/finalWalk.unity
+    guid: 6cd7754c64ea043cf9c3dd0990edd76c
+  - enabled: 1
+    path: Assets/Scenes/credits.unity
+    guid: a13526b25b330454e9bd42fe44b21d1d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

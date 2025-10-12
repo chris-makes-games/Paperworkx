@@ -17,7 +17,7 @@ public class AIModule : MonoBehaviour
     {
         HighlighterLight = HighLighter.GetComponent<Light2D>();
         HighlighterLight.intensity = 0f;
-        exlamationMark.SetActive(false);
+        exlamationMark.SetActive(true);
     }
 
     // Update is called once per frame
@@ -32,10 +32,7 @@ public class AIModule : MonoBehaviour
         {
             if (clickable)
             {
-                if (hasQuest)
-                {
-                    SceneManager.LoadScene("AIModule");
-                }                
+                SceneManager.LoadScene("AIEval");
             }
         }
     }
