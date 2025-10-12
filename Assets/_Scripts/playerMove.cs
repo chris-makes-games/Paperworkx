@@ -131,7 +131,7 @@ public class playerMove : MonoBehaviour
         }
         else if (collision.CompareTag("mainIntoTurret"))
         {
-            playerCamera.transform.position = new Vector2(0, 8);
+            playerCamera.transform.position = new Vector2(0, -8);
             managerScript.movePlayer(mainIntoTurret);
         }
         else if (collision.CompareTag("turretExit"))
