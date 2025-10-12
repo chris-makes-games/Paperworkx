@@ -10,6 +10,9 @@ public class PrinterModule : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public GameObject exlamationMark;// quest marker object
 
+    //used to give paper to player
+    public GameObject playerPaper;
+
     private bool clickable = false;
 
     public GameObject HighLighter;//highlighter obj
@@ -22,12 +25,7 @@ public class PrinterModule : MonoBehaviour
         HighlighterLight = HighLighter.GetComponent<Light2D>();
         HighlighterLight.intensity = 0f;
         exlamationMark.SetActive(false);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        PaperReady();
     }
 
     void OnMouseOver()
@@ -39,10 +37,6 @@ public class PrinterModule : MonoBehaviour
                 if (hasPaper)
                 {
                     PaperDone();
-                }
-                else
-                {
-                    PaperReady();
                 }
             }
         }
@@ -72,5 +66,6 @@ public class PrinterModule : MonoBehaviour
         hasPaper = false;
         spriteRenderer.sprite = printerPaperUnloaded;
         exlamationMark.SetActive(false);
+        playerPaper.SetActive(true);
     }
 }

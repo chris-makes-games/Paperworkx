@@ -17,7 +17,7 @@ public class TVModule : MonoBehaviour
     {
         HighlighterLight = HighLighter.GetComponent<Light2D>();
         HighlighterLight.intensity = 0f;
-        exlamationMark.SetActive(true);
+        exlamationMark.SetActive(false);
     }
 
     // Update is called once per frame
