@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cd9809323cffada418d4f7d2fee4c9ec
+guid: 1a5438819ce8d3e458562bacdf7a73ac
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -539579915749326718
-    second: Turret_0
+      213: 4531841599194787370
+    second: OutDoorWall (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Turret_0
+      name: OutDoorWall (1)_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 39
-        width: 95
-        height: 31
+        x: 0
+        y: 249
+        width: 1000
+        height: 751
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 28083d9ece60388f0800000000000000
-      internalID: -539579915749326718
+      spriteID: a2ee75a7ce554ee30800000000000000
+      internalID: 4531841599194787370
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Turret_0: -539579915749326718
+      OutDoorWall (1)_0: 4531841599194787370
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
