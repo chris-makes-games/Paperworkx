@@ -23,7 +23,6 @@ public class PosterHider : MonoBehaviour
     {
         timer = delay;
         originalLocalScale = transform.localScale;
-        originalLocalScale = transform.localScale;
     }
 
     void LateUpdate()

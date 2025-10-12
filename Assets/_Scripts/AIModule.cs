@@ -9,6 +9,15 @@ public class AIModule : MonoBehaviour
     public GameObject exlamationMark;// quest marker object
     private bool clickable = false;
 
+    //big brother screen
+    public GameObject bigBrother;
+
+    //find game manager
+    public GameObject gameManager;
+
+    //player paper
+    public GameObject playerPaper;
+
     public GameObject HighLighter;//highlighter obj
     private Light2D HighlighterLight;// light compontent of highlighter
 
@@ -18,6 +27,7 @@ public class AIModule : MonoBehaviour
         HighlighterLight = HighLighter.GetComponent<Light2D>();
         HighlighterLight.intensity = 0f;
         exlamationMark.SetActive(true);
+
     }
 
     // Update is called once per frame
@@ -32,7 +42,7 @@ public class AIModule : MonoBehaviour
         {
             if (clickable)
             {
-                SceneManager.LoadScene("AIEval");
+                bigBrother.SetActive(true);
             }
         }
     }
