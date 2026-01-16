@@ -2990,8 +2990,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1164687121}
   - component: {fileID: 1164687120}
-  - component: {fileID: 1164687122}
   - component: {fileID: 1164687123}
+  - component: {fileID: 1164687124}
   m_Layer: 0
   m_Name: poster_red
   m_TagString: Untagged
@@ -3073,20 +3073,6 @@ Transform:
   - {fileID: 136346395}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &1164687122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1164687119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 797a6bf3886d82c4e978fd2ff1557f27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PosterModule
-  HighLighter: {fileID: 136346394}
-  bigPoster: {fileID: 1438432709}
 --- !u!61 &1164687123
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3121,7 +3107,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.015122294, y: 0.3087147}
+  m_Offset: {x: -0.03919077, y: 0.064416796}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3131,8 +3117,22 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.8476517, y: 1.2478724}
+  m_Size: {x: 1.1530967, y: 0.4242391}
   m_EdgeRadius: 0
+--- !u!114 &1164687124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164687119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 797a6bf3886d82c4e978fd2ff1557f27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PosterModule
+  HighLighter: {fileID: 136346394}
+  bigPoster: {fileID: 1438432709}
 --- !u!1 &1196860868
 GameObject:
   m_ObjectHideFlags: 0
@@ -5964,6 +5964,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4106301014420749634, guid: aa208403802bea0439c3d5d0fbcce2bb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443067141529121003, guid: aa208403802bea0439c3d5d0fbcce2bb, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

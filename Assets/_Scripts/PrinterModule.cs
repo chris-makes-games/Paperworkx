@@ -4,83 +4,83 @@ using UnityEngine.SceneManagement;
 
 public class PrinterModule : MonoBehaviour
 {
-    public Sprite printerPaperReady; //sprite with paper
-    public Sprite printerPaperUnloaded; //regular sprite
-    private bool hasPaper = false;
-    private SpriteRenderer spriteRenderer;
-    public GameObject exlamationMark;// quest marker object
+  public Sprite printerPaperReady; //sprite with paper
+  public Sprite printerPaperUnloaded; //regular sprite
+  private bool hasPaper = false;
+  private SpriteRenderer spriteRenderer;
+  public GameObject exlamationMark;// quest marker object
 
-    private bool paperPrinted = false;
+  private bool paperPrinted = false;
 
-    //used to give paper to player
-    public GameObject playerPaper;
+  //used to give paper to player
+  public GameObject playerPaper;
 
-    private bool clickable = false;
+  private bool clickable = false;
 
-    public GameObject HighLighter;//highlighter obj
-    private Light2D HighlighterLight;// light compontent of highlighter
+  public GameObject HighLighter;//highlighter obj
+  private Light2D HighlighterLight;// light compontent of highlighter
 
-    public static PrinterModule Instance { get; private set; } //keeps printer loaded
+  public static PrinterModule Instance { get; private set; } //keeps printer loaded
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+  // Start is called once before the first execution of Update after the MonoBehaviour is created
+  void Start()
+  {
+    spriteRenderer = GetComponent<SpriteRenderer>();
+    HighlighterLight = HighLighter.GetComponent<Light2D>();
+    HighlighterLight.intensity = 0f;
+    exlamationMark.SetActive(false);
+    playerPaper = playerMove.Instance.paper;
+  }
+
+  void Update()
+  {
+    if (playerMove.Instance.paperPrinting > -1 && !paperPrinted)
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        HighlighterLight = HighLighter.GetComponent<Light2D>();
-        HighlighterLight.intensity = 0f;
-        exlamationMark.SetActive(false);
-        playerPaper = playerMove.Instance.paper;
+      PaperReady();
     }
 
-    void Update()
+  }
+
+  void OnMouseOver()
+  {
+    if (Input.GetMouseButtonDown(0))
     {
-        if (playerMove.Instance.paperPrinting > -1 && !paperPrinted) 
+      if (clickable)
+      {
+        if (hasPaper)
         {
-            PaperReady();
+          PaperDone();
         }
-
+      }
     }
+  }
 
-    void OnMouseOver()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (clickable)
-            {
-                if (hasPaper)
-                {
-                    PaperDone();
-                }
-            }
-        }
-    }
+  void OnTriggerEnter2D(Collider2D collision)
+  {
+    HighlighterLight.intensity = 100f;
+    clickable = true;
+  }
 
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        HighlighterLight.intensity = 100f;
-        clickable = true;
-    }
+  void OnTriggerExit2D(Collider2D collision)
+  {
+    HighlighterLight.intensity = 0f;
+    clickable = false;
+  }
 
-    void OnTriggerExit2D(Collider2D collision)
-    {
-        HighlighterLight.intensity = 0f;
-        clickable = false;
-    }
+  void PaperReady()
+  {
+    hasPaper = true;
+    spriteRenderer.sprite = printerPaperReady;
+    exlamationMark.SetActive(true);
+    paperPrinted = true;
+  }
 
-    void PaperReady()
-    {
-        hasPaper = true;
-        spriteRenderer.sprite = printerPaperReady;
-        exlamationMark.SetActive(true);
-        paperPrinted = true;
-    }
-
-    void PaperDone()
-    {
-        hasPaper = false;
-        spriteRenderer.sprite = printerPaperUnloaded;
-        exlamationMark.SetActive(false);
-        playerPaper.SetActive(true);
-        paperPrinted = false;
-    }
+  void PaperDone()
+  {
+    hasPaper = false;
+    spriteRenderer.sprite = printerPaperUnloaded;
+    exlamationMark.SetActive(false);
+    playerPaper.SetActive(true);
+    //paperPrinted = false;
+  }
 }
